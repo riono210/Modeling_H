@@ -13,7 +13,7 @@
         <!--Data Source-->
         <scene sceneID="cMB-yK-WT6">
             <objects>
-                <viewController id="OG3-JU-0wR" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OG3-JU-0wR" customClass="CalendarViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5bj-vE-kqO">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

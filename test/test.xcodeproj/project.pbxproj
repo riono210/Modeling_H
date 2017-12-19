@@ -11,12 +11,13 @@
 		2D26A96AB17A2CF761CAA3F5 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 916A1B9ACBCA172C8105C300 /* Pods_testTests.framework */; };
 		6F32C95625026003A2A1AEB0 /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1496AE2E625F09343A405B46 /* Pods_testUITests.framework */; };
 		77E13CF81FE4DF350026792C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13CF71FE4DF350026792C /* AppDelegate.swift */; };
-		77E13CFA1FE4DF350026792C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13CF91FE4DF350026792C /* ViewController.swift */; };
+		77E13CFA1FE4DF350026792C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13CF91FE4DF350026792C /* CalendarViewController.swift */; };
 		77E13CFD1FE4DF350026792C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E13CFB1FE4DF350026792C /* Main.storyboard */; };
 		77E13CFF1FE4DF350026792C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77E13CFE1FE4DF350026792C /* Assets.xcassets */; };
 		77E13D021FE4DF350026792C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E13D001FE4DF350026792C /* LaunchScreen.storyboard */; };
 		77E13D0D1FE4DF350026792C /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13D0C1FE4DF350026792C /* testTests.swift */; };
 		77E13D181FE4DF350026792C /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13D171FE4DF350026792C /* testUITests.swift */; };
+		B836B6311FE7B2FB007D0174 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836B6301FE7B2FB007D0174 /* InputViewController.swift */; };
 		B8636D031FE5EB9700F4BBB9 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */; };
 		B8636D051FE5EBA800F4BBB9 /* Earning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D041FE5EBA800F4BBB9 /* Earning.storyboard */; };
 		B8636D071FE5EBB000F4BBB9 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D061FE5EBB000F4BBB9 /* Input.storyboard */; };
@@ -45,7 +46,7 @@
 		5488122B2A05DE372DE489A5 /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77E13CF41FE4DF350026792C /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E13CF71FE4DF350026792C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77E13CF91FE4DF350026792C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77E13CF91FE4DF350026792C /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		77E13CFC1FE4DF350026792C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77E13CFE1FE4DF350026792C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77E13D011FE4DF350026792C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +63,7 @@
 		9B33B3D24810015F0265935B /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		A4E4DCD25572F8C8D25E174A /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A555DA86656DC4338ED5AC63 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B836B6301FE7B2FB007D0174 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = /Users/e165728/xcodeProjects/Modeling_H/test/test/InputViewController.swift; sourceTree = "<absolute>"; };
 		B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		B8636D041FE5EBA800F4BBB9 /* Earning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Earning.storyboard; sourceTree = "<group>"; };
 		B8636D061FE5EBB000F4BBB9 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
@@ -132,8 +134,9 @@
 		77E13CF61FE4DF350026792C /* test */ = {
 			isa = PBXGroup;
 			children = (
+				B836B6301FE7B2FB007D0174 /* InputViewController.swift */,
 				77E13CF71FE4DF350026792C /* AppDelegate.swift */,
-				77E13CF91FE4DF350026792C /* ViewController.swift */,
+				77E13CF91FE4DF350026792C /* CalendarViewController.swift */,
 				77E13CFB1FE4DF350026792C /* Main.storyboard */,
 				B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */,
 				B8636D041FE5EBA800F4BBB9 /* Earning.storyboard */,
@@ -473,7 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77E13CFA1FE4DF350026792C /* ViewController.swift in Sources */,
+				B836B6311FE7B2FB007D0174 /* InputViewController.swift in Sources */,
+				77E13CFA1FE4DF350026792C /* CalendarViewController.swift in Sources */,
 				77E13CF81FE4DF350026792C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
