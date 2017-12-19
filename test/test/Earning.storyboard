@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--収支-->
         <scene sceneID="QM3-3D-620">
             <objects>
                 <viewController id="TNp-OK-gnj" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aJC-H9-gIC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="money" id="qYU-NQ-mGp"/>
+                    <tabBarItem key="tabBarItem" title="収支" image="money" id="qYU-NQ-mGp"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crj-9s-qXu" userLabel="First Responder" sceneMemberID="firstResponder"/>

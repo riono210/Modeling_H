@@ -13,6 +13,13 @@ import CalculateCalendarLogic
 class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance{
 
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var Labelyear: UILabel!
+    @IBOutlet weak var Labelmonth: UILabel!
+    @IBOutlet weak var Labelday: UILabel!
+    
+    var Labelyear2: String?
+    var Labelmonth2: String?
+    var Labelday2: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,5 +90,21 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         return nil
     }
     
+    func calendar(_ calendar:FSCalendar, didSelect date: Date, at monthPosition:FSCalendarMonthPosition){
+        let selectDay = getDay(date)
+        Labelyear.text = String(selectDay.0)
+        Labelmonth.text = String(selectDay.1)
+        Labelday.text = String(selectDay.2)
+        Labelyear2 = String(selectDay.0)
+        Labelmonth2 = String(selectDay.1)
+        Labelday2 = String(selectDay.2)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let inputVc = segue.destination as! InputViewController
+        inputVc.textYear2 = self.Labelyear.text
+        inputVc.textMonth2 = self.Labelmonth.text
+        inputVc.textDay2 = self.Labelday.text
+    }
 }
 

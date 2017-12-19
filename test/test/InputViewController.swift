@@ -16,15 +16,24 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var testLabel: UILabel!
     
+    @IBOutlet weak var textYear: UILabel!
+    @IBOutlet weak var textMonth: UILabel!
+    @IBOutlet weak var textDay: UILabel!
+    
+    var textYear2: String?
+    var textMonth2: String?
+    var textDay2: String?
+    
     let pickerView = UIPickerView()
     
     var pickOption = ["カテゴリ1", "カテゴリ2", "カテゴリ3", "カテゴリ4", "カテゴリ5"]
     
-    
+    //textYear.text = textYear2
+    //textMonth.text = textMonth2
+    //textDay.text = textDay2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         testLabel.text = "収入"
 
         pickerView.delegate = self
@@ -114,7 +123,6 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             print("該当無し")
         }
     }
-    
 }
 
 
