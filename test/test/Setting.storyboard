@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--設定-->
+        <!--使い方-->
         <scene sceneID="OOa-h0-Gav">
             <objects>
                 <viewController id="z1b-2u-vBS" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7CN-AV-bTU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" image="gear" id="nWD-Yc-cPB"/>
+                    <tabBarItem key="tabBarItem" title="使い方" image="manual" id="nWD-Yc-cPB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JyX-K4-kH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -29,6 +29,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear" width="50" height="50"/>
+        <image name="manual" width="50" height="50"/>
     </resources>
 </document>

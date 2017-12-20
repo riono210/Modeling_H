@@ -1,16 +1,15 @@
-//
-//  AppDelegate.swift
-//  test
-//
-//  Created by 松下亮太 on 2017/12/16.
-//  Copyright © 2017年 松下亮太. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var year:String?
+    var month:String?
+    var day:String?
+    
+    var Tagtext:String?
+    var Datatext:String?
+    var Categorytext:String?
+    
     var window: UIWindow?
 
 
