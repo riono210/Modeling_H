@@ -29,6 +29,9 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         InputTableView.sectionHeaderHeight = 200
         
+        //金額項目に数字入力のみ行える
+        NotificationCenter.default.addObserver(self,selector:#selector(textFieldDidChange),name: NSNotification.Name.UITextFieldTextDidChange,object: Money)
+        
         //AppDelegateのインスタンスを取得
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
@@ -212,8 +215,14 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         cost.text = " "
         //すぐに表示するためにviewcontrollerのリロード
         loadView()
-        viewDidLoad()
-        
+        viewDidLoad()        
+    }
+    
+    //金額項目に数字入力のみにする
+    @objc func textFieldDidChange(notification: NSNotification) {
+        let textField = notification.object as! UITextField
+        guard let text = textField.text else { return }
+        guard let intText = Int(text) else { textField.text = ""; return }
     }
 }
 

@@ -77,10 +77,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     func calendar(_ calendar:FSCalendar, didSelect date: Date, at monthPosition:FSCalendarMonthPosition){
         let selectDay = getDay(date)
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
-        //Labelyear.text = String(selectDay.0)
-        //Labelmonth.text = String(selectDay.1)
-        //Labelday.text = String(selectDay.2)
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        //AppDelegateのインスタンスを取得
         
         appDelegate.year = String(selectDay.0)
         appDelegate.month = String(selectDay.1)

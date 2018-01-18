@@ -18,12 +18,12 @@
 		77E13D0D1FE4DF350026792C /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13D0C1FE4DF350026792C /* testTests.swift */; };
 		77E13D181FE4DF350026792C /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E13D171FE4DF350026792C /* testUITests.swift */; };
 		B836B6311FE7B2FB007D0174 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836B6301FE7B2FB007D0174 /* InputViewController.swift */; };
-		B836B6331FE90676007D0174 /* EarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836B6321FE90676007D0174 /* EarningViewController.swift */; };
 		B836B6351FEA3C88007D0174 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836B6341FEA3C88007D0174 /* GraphViewController.swift */; };
 		B8636D031FE5EB9700F4BBB9 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */; };
 		B8636D051FE5EBA800F4BBB9 /* Earning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D041FE5EBA800F4BBB9 /* Earning.storyboard */; };
 		B8636D071FE5EBB000F4BBB9 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D061FE5EBB000F4BBB9 /* Input.storyboard */; };
 		B8636D091FE5EBB800F4BBB9 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8636D081FE5EBB800F4BBB9 /* Setting.storyboard */; };
+		B89865D22007330C003BEAF7 /* EarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89865D12007330C003BEAF7 /* EarningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +66,12 @@
 		A4E4DCD25572F8C8D25E174A /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A555DA86656DC4338ED5AC63 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B836B6301FE7B2FB007D0174 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InputViewController.swift; path = /Users/e165728/xcodeProjects/Modeling_H/test/test/InputViewController.swift; sourceTree = "<absolute>"; };
-		B836B6321FE90676007D0174 /* EarningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarningViewController.swift; sourceTree = "<group>"; };
 		B836B6341FEA3C88007D0174 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		B8636D041FE5EBA800F4BBB9 /* Earning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Earning.storyboard; sourceTree = "<group>"; };
 		B8636D061FE5EBB000F4BBB9 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		B8636D081FE5EBB800F4BBB9 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		B89865D12007330C003BEAF7 /* EarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EarningViewController.swift; path = ../EarningViewController.swift; sourceTree = "<group>"; };
 		F73F345B347555E31D5E3534 /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				77E13CF71FE4DF350026792C /* AppDelegate.swift */,
+				B89865D12007330C003BEAF7 /* EarningViewController.swift */,
 				B836B6301FE7B2FB007D0174 /* InputViewController.swift */,
 				77E13CF91FE4DF350026792C /* CalendarViewController.swift */,
-				B836B6321FE90676007D0174 /* EarningViewController.swift */,
 				B836B6341FEA3C88007D0174 /* GraphViewController.swift */,
 				77E13CFB1FE4DF350026792C /* Main.storyboard */,
 				B8636D021FE5EB9700F4BBB9 /* Calendar.storyboard */,
@@ -486,9 +486,9 @@
 			files = (
 				B836B6311FE7B2FB007D0174 /* InputViewController.swift in Sources */,
 				B836B6351FEA3C88007D0174 /* GraphViewController.swift in Sources */,
-				B836B6331FE90676007D0174 /* EarningViewController.swift in Sources */,
 				77E13CFA1FE4DF350026792C /* CalendarViewController.swift in Sources */,
 				77E13CF81FE4DF350026792C /* AppDelegate.swift in Sources */,
+				B89865D22007330C003BEAF7 /* EarningViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

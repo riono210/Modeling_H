@@ -70,9 +70,9 @@
                     <tabBarItem key="tabBarItem" title="収支" image="money" id="21Y-DN-dls"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="daysLabel" destination="j69-LU-fxT" id="bEj-ys-gGV"/>
-                        <outlet property="sumLabel" destination="ZTi-Vh-ibJ" id="dZH-or-nIO"/>
-                        <outlet property="tableView" destination="cYK-9O-EFo" id="D1d-As-FVV"/>
+                        <outlet property="daysLabel" destination="j69-LU-fxT" id="rEc-cY-edY"/>
+                        <outlet property="sumLabel" destination="ZTi-Vh-ibJ" id="EUp-lj-5el"/>
+                        <outlet property="tableView" destination="cYK-9O-EFo" id="ULd-Xn-h16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,6 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="327"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kst-UR-6LH"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOa-Q0-nIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
