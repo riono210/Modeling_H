@@ -13,7 +13,6 @@ import RealmSwift
 class Income: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     weak var parent: InputViewController!
-
     var myItem: [incomeData] = []
     
     override func awakeFromNib() {

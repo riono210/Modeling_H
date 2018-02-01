@@ -13,7 +13,6 @@ import RealmSwift
 class Expence: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     weak var parent: InputViewController!
-    
     var myItem_2: [expenceData] = []
     
     override func awakeFromNib() {
