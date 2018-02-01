@@ -133,12 +133,13 @@
                     <connections>
                         <outlet property="creditLable" destination="zhI-3c-lUc" id="Y1G-5t-USC"/>
                         <outlet property="daysLabel" destination="j69-LU-fxT" id="rEc-cY-edY"/>
-                        <outlet property="expenceAmount" destination="rUk-sz-Duf" id="5Cx-Xx-EVQ"/>
-                        <outlet property="incomeAmount" destination="FAA-gu-OoS" id="uHm-do-B1h"/>
-                        <outlet property="pieChartView" destination="CWE-DU-trj" id="Nib-60-7jE"/>
+                        <outlet property="expenceAmount" destination="rUk-sz-Duf" id="8eR-R0-pay"/>
+                        <outlet property="incomeAmount" destination="FAA-gu-OoS" id="vhg-2Y-yER"/>
+                        <outlet property="pieChartView" destination="CWE-DU-trj" id="B3T-Uw-PAg"/>
                         <outlet property="sumLabel" destination="cA2-UD-vbf" id="EmC-x7-z0y"/>
                         <outlet property="sumNum" destination="0bu-DC-Qpc" id="3vA-hy-wct"/>
-                        <outlet property="totalAmount" destination="3YU-RJ-NDz" id="ou9-Lf-NWB"/>
+                        <outlet property="todayLabel" destination="j69-LU-fxT" id="bcf-CZ-z23"/>
+                        <outlet property="totalAmount" destination="3YU-RJ-NDz" id="gGZ-WA-uDb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
