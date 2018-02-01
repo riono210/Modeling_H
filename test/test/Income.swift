@@ -13,6 +13,7 @@ import RealmSwift
 class Income: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     weak var parent: InputViewController!
+    var mydata: [incomeData] = []
     var myItem: [incomeData] = []
     
     override func awakeFromNib() {
@@ -24,9 +25,14 @@ class Income: UITableView, UITableViewDelegate, UITableViewDataSource {
 
         let realm = try! Realm()
         let myObj = realm.objects(incomeData.self)
-        myItem = []
+        mydata = []
         myObj.forEach{item in
-            myItem.append(item)
+            mydata.append(item)
+        }
+        
+        myItem = []
+        for i in 0..<mydata.count{
+            myItem.append(mydata[(mydata.count-1) - i])
         }
     }
     

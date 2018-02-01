@@ -121,14 +121,14 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             incomeView.isHidden  = false
             expenceView.isHidden = true
             testLabel.text = "収入"
-            pickOption = ["カテゴリ1", "カテゴリ2", "カテゴリ3", "カテゴリ4", "カテゴリ5"]
+            pickOption = ["バイト・給料","その他"]
             pickerTextField.text = ""
             segCount = 0
         } else {
             incomeView.isHidden  = true
             expenceView.isHidden = false
             testLabel.text = "支出"
-            pickOption = ["テスト1", "テスト2", "テスト3", "テスト4", "テスト5"]
+            pickOption = ["食費","日用品","交通費","本・雑誌","携帯電話・インターネット","医療費・医薬品","交際費","家賃","衣類","水道・電気・ガス","その他"]
             pickerTextField.text = ""
             segCount = 1
         }
@@ -143,10 +143,17 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         //AppDelegateのインスタンスを取得
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        //AppDelegateで設定した値をラベルに設定
-        textYear.text = appDelegate.year
-        textMonth.text = appDelegate.month
-        textDay.text = appDelegate.day
+        
+        if appDelegate.year == "" {
+            textYear.text = dates(c: 1)
+            textMonth.text = dates(c: 2)
+            textDay.text = dates(c: 3)
+        }else {
+            //AppDelegateで設定した値をラベルに設定
+            textYear.text = appDelegate.year
+            textMonth.text = appDelegate.month
+            textDay.text = appDelegate.day
+        }
         
         let income = Income()
         let expence = Expence()
@@ -158,12 +165,29 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // 日付の取得
-    func dates () -> String{
+    func dates (c: Int) -> String{
         let date = Date()
         let format: DateFormatter = DateFormatter()
         format.dateFormat = "yyyy年MM月dd日"
+        var sDate = format.string(from: date)
         
-        let sDate = format.string(from: date)
+        if c ==  0{
+            format.dateFormat = "yyyy年MM月dd日"
+            sDate = format.string(from: date)
+            return sDate
+        }else if c == 1 {
+            format.dateFormat = "yyyy"
+            sDate = format.string(from: date)
+            return sDate
+        }else if c == 2 {
+            format.dateFormat = "MM"
+            sDate = format.string(from: date)
+            return sDate
+        }else if c == 3 {
+            format.dateFormat = "dd"
+            sDate = format.string(from: date)
+            return sDate
+        }
         return sDate
     }
     
@@ -187,6 +211,9 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 incomedata.data = Int(Money.text!)!
                 incomedata.label = cost.text!
                 incomedata.Category = pickerTextField.text!
+//                incomedata.year = Int(textYear.text!)!
+//                incomedata.month = Int(textMonth.text!)!
+//                incomedata.day = Int(textDay.text!)!
                 incomedata.save()
             
                 Money.text=""
@@ -208,6 +235,9 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 expencedata.data = Int(Money.text!)!
                 expencedata.label = cost.text!
                 expencedata.Category = pickerTextField.text!
+//                expencedata.year = Int(textYear.text!)!
+//                expencedata.month = Int(textMonth.text!)!
+//                expencedata.day = Int(textDay.text!)!
                 expencedata.save()
                 
                 Money.text=""
@@ -231,7 +261,7 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @objc func textFieldDidChange(notification: NSNotification) {
         let textField = notification.object as! UITextField
         guard let text = textField.text else { return }
-        guard let intText = Int(text) else { textField.text = ""; return }
+        guard Int(text) != nil else { textField.text = ""; return }
     }
 }
 

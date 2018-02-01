@@ -14,6 +14,7 @@ class Expence: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     weak var parent: InputViewController!
     var myItem_2: [expenceData] = []
+    var mydata_2: [expenceData] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,10 +25,16 @@ class Expence: UITableView, UITableViewDelegate, UITableViewDataSource {
         
         let realm = try! Realm()
         let myObj = realm.objects(expenceData.self)
-        myItem_2 = []
+        mydata_2 = []
         myObj.forEach{item in
-            myItem_2.append(item)
+            mydata_2.append(item)
         }
+        
+        myItem_2 = []
+        for i in 0..<mydata_2.count{
+            myItem_2.append(mydata_2[(mydata_2.count-1) - i])
+        }
+
     }
     
     
