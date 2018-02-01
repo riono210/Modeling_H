@@ -1,8 +1,13 @@
 import UIKit
 import FSCalendar
-import Foundation
+import RealmSwift
 
-class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate, UITabBarDelegate, UITableViewDelegate, UITableViewDataSource{
+class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate, UITabBarDelegate{
+    
+    @IBOutlet var expenceView: Expence!
+    @IBOutlet var incomeView: Income!
+    @IBOutlet weak var tableBaseView: UIView!
+    @IBOutlet weak var Segment: UISegmentedControl!
     
     @IBOutlet weak var Money: UITextField!
     @IBOutlet weak var cost: UITextField!
@@ -14,34 +19,30 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var textMonth: UILabel!
     @IBOutlet weak var textDay: UILabel!
     
-    @IBOutlet weak var InputTableView: UITableView!
-    
     let pickerView = UIPickerView()
+    var pickOption = [String]()
+
+    var myItem: [incomeData] = []
+    var myItem_2: [expenceData] = []
     
-    var pickOption = ["カテゴリ1", "カテゴリ2", "カテゴリ3", "カテゴリ4", "カテゴリ5"]
+    var segCount: Int!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // tableviewの大きさを変更するのに必要
-        InputTableView.dataSource = self
-        InputTableView.delegate = self
-        
-        InputTableView.sectionHeaderHeight = 200
+        //収支・支出のテーブルを表示
+        incomeView.parent = self
+        expenceView.parent = self
+        tableBaseView.addSubview(incomeView)
+        tableBaseView.addSubview(expenceView)
+        testSegmentControl(Segment)
         
         //金額項目に数字入力のみ行える
         NotificationCenter.default.addObserver(self,selector:#selector(textFieldDidChange),name: NSNotification.Name.UITextFieldTextDidChange,object: Money)
         
-        //AppDelegateのインスタンスを取得
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        //AppDelegateで設定した値をラベルに設定
-        textYear.text = appDelegate.year
-        textMonth.text = appDelegate.month
-        textDay.text = appDelegate.day
-        
-        testLabel.text = "収入"
-
+        //以下は全て入力するUITextFieldの細かい設定
         pickerView.delegate = self
         
         let toolBar = UIToolbar()
@@ -74,6 +75,7 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
     }
     
+    //以下UITextFieldに関する設定
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -112,37 +114,48 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     
+    
     //セグメントコントロールが押された時のカテゴリの表示の変更，ラベルの変更
     @IBAction func testSegmentControl(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            pickerTextField.text = ""
-            pickOption = ["カテゴリ1", "カテゴリ2", "カテゴリ3", "カテゴリ4", "カテゴリ5"]
+        if Segment.selectedSegmentIndex == 0 {
+            incomeView.isHidden  = false
+            expenceView.isHidden = true
             testLabel.text = "収入"
-            
-        case 1:
+            pickOption = ["カテゴリ1", "カテゴリ2", "カテゴリ3", "カテゴリ4", "カテゴリ5"]
             pickerTextField.text = ""
-            pickOption = ["テスト1", "テスト2", "テスト3", "テスト4", "テスト5"]
-            
+            segCount = 0
+        } else {
+            incomeView.isHidden  = true
+            expenceView.isHidden = false
             testLabel.text = "支出"
-        default:
-            print("該当無し")
+            pickOption = ["テスト1", "テスト2", "テスト3", "テスト4", "テスト5"]
+            pickerTextField.text = ""
+            segCount = 1
         }
     }
     
-    //CalendarViewContorollerからの値の引き渡し
-    override func viewWillAppear(_ animated: Bool) {
-        loadView()
-        viewDidLoad()
-    }
     
-    //tableViewCellに表示するためのデータ
-//    var moneyTag = ["水道代", "外食", "本代"]
-    var moneyTag = [String]()
-//    var moneyData = ["800", "3000", "2000"]
-//    var moneyCategory = ["光熱費", "生活費", "雑費"]
-    var moneyData = [String]()
-    var moneyCategory = [String]()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        incomeView.frame = tableBaseView.bounds
+        expenceView.frame = tableBaseView.bounds
+        
+        //AppDelegateのインスタンスを取得
+        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        //AppDelegateで設定した値をラベルに設定
+        textYear.text = appDelegate.year
+        textMonth.text = appDelegate.month
+        textDay.text = appDelegate.day
+        
+        let income = Income()
+        let expence = Expence()
+        incomeView.reloadData()
+        expenceView.reloadData()
+        income.awakeFromNib()
+        expence.awakeFromNib()
+        
+    }
     
     // 日付の取得
     func dates () -> String{
@@ -154,68 +167,64 @@ class InputViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return sDate
     }
     
-    // これがないとヘッダーが表示されない
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let title =  " "
-        return title
-    }
+    //データベースから取得したデータの更新
+//    override func viewWillAppear(_ animated: Bool) {
+//        let income = Income()
+//        let expence = Expence()
+//        incomeView.reloadData()
+//        expenceView.reloadData()
+//        income.awakeFromNib()
+//        expence.awakeFromNib()
+//    }
     
-    //この関数内でヘッダーの設定を行う
-    internal func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel(frame: CGRect(x:0, y:0, width: tableView.bounds.width, height: 50))
-        label.text = " カテゴリ                                                  タイトル          金額"
-        label.font = UIFont.italicSystemFont(ofSize: 30)
-        return label
-    }
-    
-    // sectionの数を決める
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  moneyTag.count
-    }
-    
-    // cellに表示する中身
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "moneyCell")
-        // 背景の色
-        cell.backgroundColor = UIColor.yellow
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 30)
-        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 30)
-        
-        let price: String = String(moneyData[indexPath.row])
-        // 表示するテキスト　改変する可能性あり
-        cell.textLabel!.text = (moneyCategory[indexPath.row])
-        cell.detailTextLabel?.text = "\(moneyTag[indexPath.row])            \(price)円"
-        return cell
-    }
-    
-    // Cellの高さを決める
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 50
-    }
-    
-    // cellを選択した時の動作
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
     
     //追加ボタンを押した時の動作
     @IBAction func AddDataBtn(_ sender: UIButton) {
-        moneyTag.append(cost.text!)
-        moneyData.append(Money.text!)
-        moneyCategory.append(pickerTextField.text!)
-        
-        //AppDelegateのインスタンスを取得
-        let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.Tagtext = cost.text
-        appDelegate.Datatext = Money.text
-        appDelegate.Categorytext = pickerTextField.text
-        
-        pickerTextField.text = " "
-        Money.text = " "
-        cost.text = " "
-        //すぐに表示するためにviewcontrollerのリロード
-        loadView()
-        viewDidLoad()        
+        if Money.text != "" && cost.text != "" && pickerTextField.text != "" {
+            if segCount == 0{
+                //収入用データベースへのデータ挿入
+                let incomedata = incomeData()
+                incomedata.data = Int(Money.text!)!
+                incomedata.label = cost.text!
+                incomedata.Category = pickerTextField.text!
+                incomedata.save()
+            
+                Money.text=""
+                cost.text=""
+                pickerTextField.text = ""
+            
+                let realm = try! Realm()
+                let myObj = realm.objects(incomeData.self)
+                myItem = []
+                myObj.forEach{item in
+                    myItem.append(item)
+                }
+                let income = Income()
+                incomeView.reloadData()
+                income.awakeFromNib()
+            }else if segCount == 1{
+                //支出用データベースへのデータ挿入
+                let expencedata = expenceData()
+                expencedata.data = Int(Money.text!)!
+                expencedata.label = cost.text!
+                expencedata.Category = pickerTextField.text!
+                expencedata.save()
+                
+                Money.text=""
+                cost.text=""
+                pickerTextField.text = ""
+                
+                let realm = try! Realm()
+                let myObj = realm.objects(expenceData.self)
+                myItem_2 = []
+                myObj.forEach{item in
+                    myItem_2.append(item)
+                }
+                let expence = Expence()
+                expenceView.reloadData()
+                expence.awakeFromNib()
+            }
+        }
     }
     
     //金額項目に数字入力のみにする
