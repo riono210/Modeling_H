@@ -10,6 +10,7 @@ import Charts
 import RealmSwift
 
 class EarningViewController: UIViewController {
+    
 
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var expenceAmount: UILabel!
