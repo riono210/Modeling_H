@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vGV-Hn-DFZ">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--使い方-->
+        <scene sceneID="kuS-bt-deL">
+            <objects>
+                <viewController id="w1f-QW-SIe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LK1-48-m2g">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SE-7M-rMD">
+                                <rect key="frame" x="338" y="166" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="入力の仕方"/>
+                                <connections>
+                                    <action selector="goInputBtn:" destination="zB6-8c-Nm8" eventType="touchUpInside" id="I79-2s-RmA"/>
+                                    <segue destination="Ez4-ro-Iue" kind="show" id="XUj-3q-aXn"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XLm-pR-utN">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="使い方" id="vdR-VH-ZBo"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXK-nF-tHO">
+                                <rect key="frame" x="338" y="302" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="収支の確認"/>
+                                <connections>
+                                    <action selector="goconfirmation:" destination="zB6-8c-Nm8" eventType="touchUpInside" id="3Az-jP-ENx"/>
+                                    <segue destination="1QN-W2-4wg" kind="show" id="HWB-pM-Be2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eKr-2E-zQr"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="使い方" id="iQa-0W-DzP"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coz-K9-Ytd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zB6-8c-Nm8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-3.125" y="261.9140625"/>
+        </scene>
+        <!--入力の仕方-->
+        <scene sceneID="RbU-60-yHP">
+            <objects>
+                <viewController id="Ez4-ro-Iue" customClass="ExplanationViewController" customModule="moneyManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LAY-3q-8fk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="①画面下の入力ボタンをタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-ym-qjg">
+                                <rect key="frame" x="92" y="128" width="321" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②入力する収入・収支を選択する．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNb-nm-jYd">
+                                <rect key="frame" x="92" y="201" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③カテゴリ・収支の内容・金額をそれぞれ選択，入力し追加ボタンを押す．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoF-Jh-7nX">
+                                <rect key="frame" x="92" y="274" width="619" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Input_image" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-7V-aNb">
+                                <rect key="frame" x="202" y="463" width="364" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2lm-xs-BBB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="入力の仕方" id="6j4-ii-rAn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFG-KM-IFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3.125" y="1122.65625"/>
+        </scene>
+        <!--グラフから確認-->
+        <scene sceneID="vpE-Xx-BlG">
+            <objects>
+                <viewController storyboardIdentifier="perMonth" id="NkN-BZ-gDe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQZ-d0-vSk">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②月別での収入・支出の差額が確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i22-BF-UfS">
+                                <rect key="frame" x="125" y="254" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③上の年を変更することで，各年の収支差額が常に確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-hX-Lpq">
+                                <rect key="frame" x="125" y="344" width="512" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph_image" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-Ff-g7C">
+                                <rect key="frame" x="191" y="534" width="386" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="①画面下のグラフボタンをタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-XO-Pzm">
+                                <rect key="frame" x="125" y="171" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GtR-cw-auw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="グラフから確認" id="GA7-mN-d5P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVZ-51-RTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="1122.65625"/>
+        </scene>
+        <!--収支の確認-->
+        <scene sceneID="lCU-vl-mFJ">
+            <objects>
+                <viewController id="1QN-W2-4wg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ce1-6K-jQl">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-Rf-KYF">
+                                <rect key="frame" x="288" y="246" width="193" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="カレンダーから確認"/>
+                                <connections>
+                                    <segue destination="eYb-sL-F6a" kind="show" id="rHp-Rt-FoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-Lm-cXv">
+                                <rect key="frame" x="319" y="410" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="グラフから確認"/>
+                                <connections>
+                                    <segue destination="NkN-BZ-gDe" kind="show" id="eds-uP-T3I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nj9-yl-LZi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="収支の確認" id="Bgc-GE-0eQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQ7-ff-cIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="261.9140625"/>
+        </scene>
+        <!--カレンダーから確認-->
+        <scene sceneID="elK-eD-Ulf">
+            <objects>
+                <viewController storyboardIdentifier="perDay" id="eYb-sL-F6a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LW2-tv-UBL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="①画面下のカレンダーをタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHP-MG-kJD">
+                                <rect key="frame" x="166" y="131" width="332" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②カレンダーの日付をタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3H-Smj">
+                                <rect key="frame" x="166" y="207" width="426" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③カレンダーの下にその月の収支差額が確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-hu-bqN">
+                                <rect key="frame" x="166" y="275" width="426" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendar_image" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-Bw-lTl">
+                                <rect key="frame" x="224" y="482" width="321" height="378"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="09y-Kt-IHg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="カレンダーから確認" id="JSI-JX-rrn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv1-TL-3nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807.8125" y="261.9140625"/>
+        </scene>
+        <!--使い方-->
+        <scene sceneID="DI9-Vl-Deh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vGV-Hn-DFZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="使い方" image="Manual" id="XXK-Ve-gQX"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CA7-hQ-jTU">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w1f-QW-SIe" kind="relationship" relationship="rootViewController" id="PGJ-j9-M8Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VjR-3f-4B8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="262"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Calendar_image" width="964" height="1286"/>
+        <image name="Input_image" width="962" height="1282"/>
+        <image name="Manual" width="50" height="50"/>
+        <image name="graph_image" width="962" height="1286"/>
+    </resources>
+</document>
