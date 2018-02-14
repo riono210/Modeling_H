@@ -84,8 +84,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-7V-aNb">
-                                <rect key="frame" x="264" y="480" width="288" height="313"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Input_image" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-7V-aNb">
+                                <rect key="frame" x="202" y="463" width="364" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -96,9 +96,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFG-KM-IFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="1123"/>
+            <point key="canvasLocation" x="-3.125" y="1122.65625"/>
         </scene>
-        <!--月ごとに確認-->
+        <!--グラフから確認-->
         <scene sceneID="vpE-Xx-BlG">
             <objects>
                 <viewController storyboardIdentifier="perMonth" id="NkN-BZ-gDe" sceneMemberID="viewController">
@@ -106,47 +106,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="①画面下の収支をタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-sE-SBa">
-                                <rect key="frame" x="153" y="159" width="252" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②月別での収入・支出の差額が確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i22-BF-UfS">
+                                <rect key="frame" x="125" y="254" width="353" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③グラフで金額の割合を確認することができる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-e6-OAb">
-                                <rect key="frame" x="153" y="319" width="262" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③上の年を変更することで，各年の収支差額が常に確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2b-hX-Lpq">
+                                <rect key="frame" x="125" y="344" width="512" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="④グラフ下に収支の差額が確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i22-BF-UfS">
-                                <rect key="frame" x="153" y="410" width="252" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②収入・支出の確認したい方をタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdy-4a-aJe">
-                                <rect key="frame" x="153" y="224" width="252" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Input" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-Ff-g7C">
-                                <rect key="frame" x="191" y="538" width="386" height="328"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph_image" translatesAutoresizingMaskIntoConstraints="NO" id="zK1-Ff-g7C">
+                                <rect key="frame" x="191" y="534" width="386" height="328"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="①画面下のグラフボタンをタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-XO-Pzm">
+                                <rect key="frame" x="125" y="171" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GtR-cw-auw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="月ごとに確認" id="GA7-mN-d5P"/>
+                    <navigationItem key="navigationItem" title="グラフから確認" id="GA7-mN-d5P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVZ-51-RTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="1123"/>
+            <point key="canvasLocation" x="950" y="1122.65625"/>
         </scene>
         <!--収支の確認-->
         <scene sceneID="lCU-vl-mFJ">
@@ -156,20 +149,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-Lm-cXv">
-                                <rect key="frame" x="332" y="413" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="月ごとに確認"/>
-                                <connections>
-                                    <segue destination="NkN-BZ-gDe" kind="show" id="eds-uP-T3I"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfy-Rf-KYF">
-                                <rect key="frame" x="332" y="232" width="104" height="30"/>
+                                <rect key="frame" x="288" y="246" width="193" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="日ごとに確認"/>
+                                <state key="normal" title="カレンダーから確認"/>
                                 <connections>
                                     <segue destination="eYb-sL-F6a" kind="show" id="rHp-Rt-FoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-Lm-cXv">
+                                <rect key="frame" x="319" y="410" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="グラフから確認"/>
+                                <connections>
+                                    <segue destination="NkN-BZ-gDe" kind="show" id="eds-uP-T3I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,9 +173,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQ7-ff-cIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="262"/>
+            <point key="canvasLocation" x="950" y="261.9140625"/>
         </scene>
-        <!--日ごとに確認-->
+        <!--カレンダーから確認-->
         <scene sceneID="elK-eD-Ulf">
             <objects>
                 <viewController storyboardIdentifier="perDay" id="eYb-sL-F6a" sceneMemberID="viewController">
@@ -197,33 +190,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②カレンダーから収支を確認したい日を選択する．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3H-Smj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="②カレンダーの日付をタップする．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-3H-Smj">
                                 <rect key="frame" x="166" y="207" width="426" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③カレンダーの下にその日の収支が表示される．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-hu-bqN">
-                                <rect key="frame" x="166" y="275" width="407" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="③カレンダーの下にその月の収支差額が確認できる．" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-hu-bqN">
+                                <rect key="frame" x="166" y="275" width="426" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-Bw-lTl">
-                                <rect key="frame" x="232" y="430" width="321" height="378"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendar_image" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-Bw-lTl">
+                                <rect key="frame" x="224" y="482" width="321" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="09y-Kt-IHg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="日ごとに確認" id="JSI-JX-rrn"/>
+                    <navigationItem key="navigationItem" title="カレンダーから確認" id="JSI-JX-rrn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kv1-TL-3nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="262"/>
+            <point key="canvasLocation" x="1807.8125" y="261.9140625"/>
         </scene>
         <!--使い方-->
         <scene sceneID="DI9-Vl-Deh">
@@ -247,8 +240,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Calendar" width="1002" height="1334"/>
-        <image name="Input" width="994" height="1332"/>
+        <image name="Calendar_image" width="964" height="1286"/>
+        <image name="Input_image" width="962" height="1282"/>
         <image name="Manual" width="50" height="50"/>
+        <image name="graph_image" width="962" height="1286"/>
     </resources>
 </document>

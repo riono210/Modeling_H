@@ -31,6 +31,8 @@ class InputViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDa
         tableView.delegate = self
         tableView.dataSource = self
         
+        changeLabel.text = "収入"
+        
         //日付の表示
         //AppDelegateのインスタンスを取得
         let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
