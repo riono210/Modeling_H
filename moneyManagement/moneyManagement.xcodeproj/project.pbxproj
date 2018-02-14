@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3545B5D620340C6600FDCEA6 /* MMTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545B5D520340C6600FDCEA6 /* MMTabBarControllerViewController.swift */; };
 		A5486BDF179113A5190F6272 /* Pods_moneyManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26C6BA7ED81D9F7E1CD44ED4 /* Pods_moneyManagement.framework */; };
 		B81A6AA7202592D0008123D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A6AA6202592D0008123D5 /* AppDelegate.swift */; };
 		B81A6AA9202592D0008123D5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A6AA8202592D0008123D5 /* CalendarViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		26C6BA7ED81D9F7E1CD44ED4 /* Pods_moneyManagement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moneyManagement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3545B5D520340C6600FDCEA6 /* MMTabBarControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTabBarControllerViewController.swift; sourceTree = SOURCE_ROOT; };
 		4120E75D49DB2F927D347F16 /* Pods-moneyManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneyManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-moneyManagement/Pods-moneyManagement.release.xcconfig"; sourceTree = "<group>"; };
 		B81A6AA3202592CF008123D5 /* moneyManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneyManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81A6AA6202592D0008123D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				B81A6AA8202592D0008123D5 /* CalendarViewController.swift */,
 				B81A6AC020259585008123D5 /* GraphViewController.swift */,
 				B81A6AC220259590008123D5 /* InputViewController.swift */,
+				3545B5D520340C6600FDCEA6 /* MMTabBarControllerViewController.swift */,
 				B81A6AC42025959A008123D5 /* ExplanationViewController.swift */,
 				B81A6AC620259EE4008123D5 /* Database.swift */,
 				B81A6AAA202592D0008123D5 /* Main.storyboard */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B81A6AC720259EE4008123D5 /* Database.swift in Sources */,
+				3545B5D620340C6600FDCEA6 /* MMTabBarControllerViewController.swift in Sources */,
 				B81A6AC120259585008123D5 /* GraphViewController.swift in Sources */,
 				B81A6AA9202592D0008123D5 /* CalendarViewController.swift in Sources */,
 				B81A6AA7202592D0008123D5 /* AppDelegate.swift in Sources */,

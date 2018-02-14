@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Graph View Controller-->
+        <!--グラフ-->
         <scene sceneID="noP-yk-Yqm">
             <objects>
                 <viewController id="AZt-b1-YDk" customClass="GraphViewController" customModule="moneyManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="seG-y3-6v3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Graph" id="jxV-TX-RLs"/>
+                    <tabBarItem key="tabBarItem" title="グラフ" image="Graph" id="jxV-TX-RLs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="linechartView" destination="6Y7-yP-Sag" id="E6L-KH-XyP"/>

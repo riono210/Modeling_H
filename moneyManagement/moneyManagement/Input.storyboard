@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Input View Controller-->
+        <!--入力-->
         <scene sceneID="mCM-i8-AvV">
             <objects>
                 <viewController id="eCH-Bg-lvh" customClass="InputViewController" customModule="moneyManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ENz-ob-fQ7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Edit" id="lGD-g9-SQy"/>
+                    <tabBarItem key="tabBarItem" title="入力" image="Edit" id="lGD-g9-SQy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="amountField" destination="GF9-Bs-jmC" id="wv0-Q1-A18"/>

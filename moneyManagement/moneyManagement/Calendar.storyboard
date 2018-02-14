@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calendar View Controller-->
+        <!--カレンダー-->
         <scene sceneID="Dts-4j-9ml">
             <objects>
                 <viewController id="Ngf-1O-5ht" customClass="CalendarViewController" customModule="moneyManagement" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Use-Zk-z8T"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Calendar-" id="QRU-Jo-5Rb"/>
+                    <tabBarItem key="tabBarItem" title="カレンダー" image="Calendar-" id="QRU-Jo-5Rb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="amount" destination="KRF-yV-w6v" id="iSJ-WF-Gt7"/>

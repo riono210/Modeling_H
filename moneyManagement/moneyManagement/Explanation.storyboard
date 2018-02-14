@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="1808" y="262"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--使い方-->
         <scene sceneID="DI9-Vl-Deh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vGV-Hn-DFZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Manual" id="XXK-Ve-gQX"/>
+                    <tabBarItem key="tabBarItem" title="使い方" image="Manual" id="XXK-Ve-gQX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CA7-hQ-jTU">
